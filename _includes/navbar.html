@@ -3,44 +3,28 @@
         <a class="navbar-brand" href="/">
             <img class="nav-logo" src="/assets/img/lstech.jpeg" alt="logo">
         </a>
-        <a class="navbar-brand navbar-text-features" href="/" style="font-size: 30px;">
+        <a class="navbar-brand navbar-text-features" href="/">
             {{ site.title }}
+            <p class="navbar-text-features" style="display: inline; font-size: 10px; vertical-align: super;position: relative; top: -7px;">TM</p>
         </a>
 
-      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item {% if page.url == '/aisec/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/">Home</a>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/project/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/project/">Project</a>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/team/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/team/">Team</a>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/news/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/news/">News</a>
-              </li>
-              <li class="nav-item dropdown {% if page.url == '/aisec/events/' %}active{% endif %}">
-                  <a class="nav-link dropdown-toggle roboto_font" href="/aisec/events/" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      Events
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {% assign all_posts = site.events %}
-                        {% for post in all_posts %}
-                            <a class="dropdown-item roboto_font" href="/aisec{{ post.url }}">{{ post.title }}</a>
-                        {% endfor %}
-                      </div>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/software/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/software/">Software</a>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/engagment/' %}active{% endif %}">
-                <a class="nav-link roboto_font" href="/aisec/engagment/">Engagement and Impact</a>
-              </li>
-              <li class="nav-item {% if page.url == '/aisec/outputs/' %}active{% endif %}">
-                  <a class="nav-link roboto_font" href="/aisec/outputs/">Other Outputs</a>
-              </li>
+    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+                <a class="nav-link normal_font" href="/">Home</a>
+            </li>
+            <li class="nav-item {% if page.url == '/products/' %}active{% endif %}">
+                <a class="nav-link normal_font" href="/products/">Products</a>
+            </li>
+            <li class="nav-item {% if page.url == '/team/' %}active{% endif %}">
+                <a class="nav-link normal_font" href="/team/">Team</a>
+            </li>
+            <li class="nav-item {% if page.url == '/partner/' %}active{% endif %}">
+                <a class="nav-link normal_font" href="/partner/">Partner</a>
+            </li>
+            <li class="nav-item">
+                <a id="quoteButton1" class="nav-link normal_font" style="cursor: pointer;">Contact</a>
+            </li>
           </ul>
       </div>
     </div>

@@ -1,52 +1,36 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var tabs = document.querySelectorAll('.tab');
-    var contents = document.querySelectorAll('.content-item');
+const modal = document.getElementById("modal");
+const quoteButton = document.getElementById("quoteButton");
+const quoteButton1 = document.getElementById("quoteButton1");
+const closeButton = document.querySelector(".close");
 
-    tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs and contents
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-            contents.forEach(function(content) {
-                content.classList.remove('active');
-            });
+quoteButton.onclick = function () {
+    modal.style.display = "flex";
+};
 
-            // Add active class to the clicked tab and corresponding content
-            tab.classList.add('active');
-            var target = tab.getAttribute('data-target');
-            document.getElementById(target).classList.add('active');
-        });
-    });
-});
+quoteButton1.onclick = function () {
+    modal.style.display = "flex";
+};
 
-document.addEventListener("DOMContentLoaded", function() {
-    const itemsPerPage = 10;
-    let currentPage = 1;
+closeButton.onclick = function () {
+    modal.style.display = "none";
+};
 
-    const items = document.querySelectorAll('.post-item');
-    const loadMoreButton = document.getElementById('load-more-talks');
-
-    function showItems(page) {
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-
-        items.forEach((item, index) => {
-            if (index >= start && index < end) {
-                item.classList.add('visible');
-            }
-        });
-
-        if (end >= items.length) {
-            loadMoreButton.style.display = 'none';
-        }
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
     }
+};
 
-    loadMoreButton.addEventListener('click', function() {
-        currentPage++;
-        showItems(currentPage);
+document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const extraDescription = button.previousElementSibling;
+
+        if (extraDescription.style.display === 'none') {
+            extraDescription.style.display = 'block'; 
+            button.textContent = 'Less'; 
+        } else {
+            extraDescription.style.display = 'none'; 
+            button.textContent = 'More'; 
+        }
     });
-
-    // Initial load
-    showItems(currentPage);
 });
