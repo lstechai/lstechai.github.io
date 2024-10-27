@@ -1,6 +1,7 @@
 const modal = document.getElementById("modal");
 const quoteButton = document.getElementById("quoteButton");
 const quoteButton1 = document.getElementById("quoteButton1");
+const quoteButton2 = document.getElementById("ContactBn");
 const closeButton = document.querySelector(".close");
 
 quoteButton.onclick = function () {
@@ -8,6 +9,10 @@ quoteButton.onclick = function () {
 };
 
 quoteButton1.onclick = function () {
+    modal.style.display = "flex";
+};
+
+quoteButton2.onclick = function () {
     modal.style.display = "flex";
 };
 
