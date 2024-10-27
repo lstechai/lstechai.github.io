@@ -311,9 +311,9 @@ body {
 }
 
 .line{
-    width: 180px; /* 直线宽度100% */
-    height: 2px; /* 直线高度 */
-    background-color: #ccc; /* 灰色 */
+    width: 180px; 
+    height: 2px; 
+    background-color: #ccc; 
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
@@ -352,6 +352,9 @@ body {
     background-color: #8a2be2;
     width: 100vw;
     margin-left: calc(50% - 50vw);
+    justify-content: space-between;
+    padding-left: 300px; 
+    padding-right: 300px;
 }
 
 .quote_title{
@@ -361,6 +364,37 @@ body {
     color: #fff;
 }
 
+.quote-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px; 
+    width: 500px; 
+    text-align: center;
+    margin: 20px auto;
+}
+
+.quote-card-text {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-family: 'PT+Serif', sans-serif;
+    font-weight: 600;
+    color: #000000;
+}
+
+.quote-card-button {
+    background-color: rgb(236 72 153);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.quote-card-button:hover {
+    background-color: #0056b3;
+}
 
 
 
@@ -398,6 +432,32 @@ body {
 .footer-btn:hover {
     background-color: #6e6e6e; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* small devices */

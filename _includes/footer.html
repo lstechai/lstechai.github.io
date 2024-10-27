@@ -1,11 +1,23 @@
-<footer class="py-2 footer-color">
-    <div class="row" style="margin-top: 50px;">
-        <div class="col-6">
+<footer class="py-2 footer-color" style="margin-bottom: 50px; padding-left: 300px; padding-right: 300px;">
+    <div class="row" style="margin-top: 50px; justify-content: space-between;">
+        <div class="col-auto">
             <p class="footer_text">We are a company of friends.</p>
         </div>
-        <div class="col-6" style="display: flex; justify-content: center;">
+        <div class="col-auto"> 
             <button class="footer-btn">Our Partners</button>
         </div>
     </div>
-    <div class="line" style="width: 80%; justify-content: center; display: flex;"></div>
+    <div class="row" style="justify-content: center;">
+        <div class="line" style="width: 80%; height: 1px; background-color: #ccc;"></div>
+    </div>
+    <div class="row" style="justify-content: space-between; margin-top: 30px;">
+        <div class="col-auto">
+            <img class="nav-logo" src="/assets/img/lstech.jpeg" alt="logo">
+            <p class="navbar-text-features" style="display: inline;">{{ site.title }}</p>
+            <p class="navbar-text-features" style="display: inline; font-size: 10px; vertical-align: super; position: relative; top: -7px;">TM</p>
+        </div>
+        <div class="col-auto">
+            <p>© L&STech Copyright 2023. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
