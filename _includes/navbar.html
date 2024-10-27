@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-color navbar-feature">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img class="nav-logo" src="/assets/img/lstech.jpeg" alt="logo">
+        </a>
+        <a class="navbar-brand navbar-text-features" href="/" style="font-size: 30px;">
+            {{ site.title }}
+        </a>
+
+      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item {% if page.url == '/aisec/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/">Home</a>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/project/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/project/">Project</a>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/team/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/team/">Team</a>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/news/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/news/">News</a>
+              </li>
+              <li class="nav-item dropdown {% if page.url == '/aisec/events/' %}active{% endif %}">
+                  <a class="nav-link dropdown-toggle roboto_font" href="/aisec/events/" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      Events
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% assign all_posts = site.events %}
+                        {% for post in all_posts %}
+                            <a class="dropdown-item roboto_font" href="/aisec{{ post.url }}">{{ post.title }}</a>
+                        {% endfor %}
+                      </div>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/software/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/software/">Software</a>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/engagment/' %}active{% endif %}">
+                <a class="nav-link roboto_font" href="/aisec/engagment/">Engagement and Impact</a>
+              </li>
+              <li class="nav-item {% if page.url == '/aisec/outputs/' %}active{% endif %}">
+                  <a class="nav-link roboto_font" href="/aisec/outputs/">Other Outputs</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</nav>
