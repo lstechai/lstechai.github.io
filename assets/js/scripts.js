@@ -4,21 +4,29 @@ const quoteButton1 = document.getElementById("quoteButton1");
 const quoteButton2 = document.getElementById("ContactBn");
 const closeButton = document.querySelector(".close");
 
-quoteButton.onclick = function () {
-    modal.style.display = "flex";
-};
+if (quoteButton) {
+    quoteButton.onclick = function () {
+        modal.style.display = "flex";
+    };
+}
 
-quoteButton1.onclick = function () {
-    modal.style.display = "flex";
-};
+if (quoteButton1) {
+    quoteButton1.onclick = function () {
+        modal.style.display = "flex";
+    };
+}
 
-quoteButton2.onclick = function () {
-    modal.style.display = "flex";
-};
+if (quoteButton2) {
+    quoteButton2.onclick = function () {
+        modal.style.display = "flex";
+    };
+}
 
-closeButton.onclick = function () {
-    modal.style.display = "none";
-};
+if (closeButton) {
+    closeButton.onclick = function () {
+        modal.style.display = "none";
+    };
+}
 
 window.onclick = function (event) {
     if (event.target === modal) {
