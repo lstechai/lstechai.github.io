@@ -8,6 +8,10 @@
             <p class="navbar-text-features" style="display: inline; font-size: 10px; vertical-align: super;position: relative; top: -7px;">TM</p>
         </a>
 
+        <button class="btn custom-button side-menu-features d-lg-none ms-auto" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="fas fa-bars"></i>
+          </button>
+
     <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item {% if page.url == '/' %}active{% endif %}">
@@ -30,6 +34,35 @@
     </div>
 </nav>
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Navigation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto">
+            <li class="sidebar-item">
+                <a class="nav-link side-menu-text" href="/">Home</a>
+            </li>
+            <li class="sidebar-item">
+                <a class="nav-link side-menu-text" href="/products/">Products</a>
+            </li>
+            <li class="sidebar-item">
+                <a class="nav-link side-menu-text" href="/team/">Team</a>
+            </li>
+            <li class="sidebar-item">
+                <a class="nav-link side-menu-text" href="/partner/">Partner</a>
+            </li>
+            <li class="sidebar-item" style="height: 160px; border-bottom: none;">
+                <p class="contact-info" style="color: #8a2be2; font-size: 20px;">Contact Us...</p>
+                <p class="contact-info" style="color: #8a2be2; font-size: 15px;"><i class="fas fa-map-marker-alt"></i> Nash House, Old Oak Ln, London NW10 6FF<br>Polo Park, Aberdeen, AB21 9JW</p>
+                <p class="contact-info" style="color: #8a2be2; font-size: 15px;"><i class="fas fa-phone-alt"></i> +44 0780 5341264</p>
+                <p class="contact-info" style="color: #8a2be2; font-size: 15px;"><i class="fas fa-envelope"></i> admin@lstech.ai</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -39,3 +72,18 @@
         <p class="contact-info"><i class="fas fa-envelope"></i> admin@lstech.ai</p>
     </div>
 </div>
+
+<style>
+/* 隐藏大型设备的按钮和小型设备的标签 */
+@media (max-width: 992px) {
+  .navbar-nav .nav-item,
+  .navbar-nav .nav-item .nav-link {
+    display: none;
+  }
+  .btn.side-menu-features {
+    display: block;
+  }
+}
+</style>
+
+
